@@ -26,12 +26,13 @@ async def init():
         for id in data:
             try:
                 await app.copy_message(-1002089478686, -1001868635501, id)
-                await asyncio.sleep(2)
+                await asyncio.sleep(10)
             except FloodWait as e:
-                flood_time = int(e.x)
-                if flood_time > 200:
-                    continue
-                await asyncio.sleep(flood_time)        
+               flood_time = e.retry_after
+               if flood_time > 200:
+                  continue
+               await asyncio.sleep(flood_time)
+        
 # Menjalankan bot
     print("[Bot Copy] - Started")
     await idle()

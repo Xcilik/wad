@@ -11,11 +11,12 @@ app = Client("video_forward_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BO
 
 
 # Handler untuk menerima pesan video dan meneruskannya 80
-@app.on_message(filters.command("gas") & filters.video)
-async def handle_video(client, message):
-    await message.reply("gas")
-    await message.fordward(-1002089478686)
-    await asyncio.sleep(1)
 
+
+@app.on_message(filters.chat(-1001868635501) & filters.video)
+async def forward_videos(client, message):
+    # Ganti "nama_grup_tujuan" dengan nama atau ID grup tujuan
+    await message.forward(chat_id=-1002089478686)
+    await asyncio.sleep(1)
 # Menjalankan bot
 app.run()

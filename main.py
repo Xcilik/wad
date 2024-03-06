@@ -10,11 +10,11 @@ app = Client("video_forward_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BO
 # Fungsi untuk meneruskan video dari satu grup ke grup lainnya
 async def forward_video(client, message):
     if message.video:
-        await client.forward_messages(chat_id="TARGET_CHAT_ID", from_chat_id=message.chat.id, message_ids=message.message_id)
+        await client.forward_messages(chat_id=-1001868635501, from_chat_id=message.chat.id, message_ids=message.message_id)
         await asyncio.sleep(1)
 
 # Handler untuk menerima pesan video dan meneruskannya
-@app.on_message(filters.command("gas") & filters.chat("SOURCE_CHAT_ID") & filters.video)
+@app.on_message(filters.command("gas") & filters.chat(-1001868635501) & filters.video)
 async def handle_video(client, message):
     await forward_video(client, message)
 

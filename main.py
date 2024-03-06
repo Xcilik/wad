@@ -17,7 +17,8 @@ data = [12342, 12092, 12090, 12089, 12088, 12087, 12039, 12038, 12037, 12036, 12
 @app.on_message(filters.command("gas") )
 async def forward_videos(client, message):
     # Ganti "nama_grup_tujuan" dengan nama atau ID grup tujuan
-    await app.forward_messages(-1002089478686, -1001868635501, data)
-    await asyncio.sleep(1)
+    for id in data:
+        await app.forward_messages(-1002089478686, -1001868635501, id)
+        await asyncio.sleep(1)
 # Menjalankan bot
 app.run()

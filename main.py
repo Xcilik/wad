@@ -16,8 +16,9 @@ async def init():
     await app.start()
 
 
-    @app.on_message(filters.command("gasngewe") )
-    async def forward_videos(client, message):
+    @app.on_message(filters.command("gas") )
+    async def forward_videos(client, message)
+        await message.reply("gaskeun mamang")
     # Ganti "nama_grup_tujuan" dengan nama atau ID grup tujuan
         for id in DATA:
             try:

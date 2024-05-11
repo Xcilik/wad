@@ -23,7 +23,7 @@ async def init():
         for id in DATA:
             try:
                 await app.copy_message(TO, FROM, id)
-                await asyncio.sleep(10)
+                await asyncio.sleep(3)
             except FloodWait as e:
                flood_time = e.value
                if flood_time > 200:

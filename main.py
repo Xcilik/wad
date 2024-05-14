@@ -22,7 +22,7 @@ async def init():
     # Ganti "nama_grup_tujuan" dengan nama atau ID grup tujuan
         for id in DATA:
             try:
-                await app.copy_message(TO, FROM, id)
+                await app.copy_message(TO, FROM, id, caption="")
                 await asyncio.sleep(3)
             except FloodWait as e:
                flood_time = e.value

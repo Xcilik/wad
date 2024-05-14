@@ -16,7 +16,7 @@ async def init():
     await app.start()
 
 
-    @app.on_message(filters.command("gas") )
+    @app.on_message(filters.command("tod") )
     async def forward_videos(client, message):
         await message.reply("gaskeun mamang")
     # Ganti "nama_grup_tujuan" dengan nama atau ID grup tujuan

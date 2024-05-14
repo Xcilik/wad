@@ -8,7 +8,7 @@ API_HASH = os.getenv("API_HASH", "243909991094faec591cdf0b8f86cbde")
 
 BOT_TOKEN = os.getenv("BOT_TOKEN", "6753641075:AAHJG1xAV1vmRs94um_A_EJweW5IN4-qWiY")
 
-TO = int(os.getenv("TO", "-1002013166037"))
+TO = int(os.getenv("TO", "-1002056752743"))
 
 FROM = int(os.getenv("FROM", "-1002089478686"))
 
